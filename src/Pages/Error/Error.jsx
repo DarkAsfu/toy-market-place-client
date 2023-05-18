@@ -3,7 +3,7 @@
 const Error = () => {
     return (
         <div>
-            <h1>Fuck him</h1>
+            <h1>404 </h1>
         </div>
     );
 };
