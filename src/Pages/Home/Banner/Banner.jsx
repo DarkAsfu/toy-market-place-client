@@ -2,7 +2,7 @@ import banner1 from '../../../../src/assets/banner/Banner1.jpg'
 import banner2 from '../../../../src/assets/banner/Banner2.jpg'
 import banner3 from '../../../../src/assets/banner/Banner3.jpg'
 import banner4 from '../../../../src/assets/banner/Banner4.jpg'
-import banner5 from '../../../../src/assets/banner/Banner5.jpg'
+// import banner5 from '../../../../src/assets/banner/Banner5.jpg'
 
 const Banner = () => {
     
