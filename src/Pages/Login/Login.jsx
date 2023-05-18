@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
     const handleSignIn = () => {
@@ -36,6 +37,7 @@ const Login = () => {
 
                         <p className="label-text-alt p-8">Are you new? please <Link to='/register' className='text-blue-400'>Register</Link></p>
                         {/* <SocialLogin></SocialLogin> */}
+                        <SocialLogin></SocialLogin>
                         {/* <small className='text-red-600 font-bold px-6 pb-3'>{error}</small>
                 <small className='text-green-600 font-bold px-6 pb-3'>{success}</small> */}
                     </div>
