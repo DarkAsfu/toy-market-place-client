@@ -1,10 +1,53 @@
 import { Link } from "react-router-dom";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Register = () => {
-    const handleRegister = () =>{
+    const {handleCreateUser, updateInfo} = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const handleRegister = (e) =>{
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, photo, email, password);
+        if (!/(?=.*[A-Z])/.test(password)) {
+            setError('Please enter at least one uppercase');
+            setSuccess('')
+            return;
+        } else if (!/(?=.*[!@#$&*])/.test(password)) {
+            setError('Please enter at least one special character');
+            setSuccess('')
+            return;
+        } else if (!/(?=.*[0-9])/.test(password)) {
+            setError('Please enter at least one number');
+            setSuccess('')
+            return;
+        } else if (!/.{6}/.test(password)) {
+            setError('Please enter minimum 6 character');
+            setSuccess('')
+            return;
+        }
+        handleCreateUser(email, password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            updateInfo(name, photo);
+            setSuccess('Register Succesfully!!!');
+            setError('');
+            form.reset();
 
+        })
+        .catch(e =>{
+            console.log(e.message);
+            setError(e.message);
+            setSuccess('')
+        })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -47,8 +90,8 @@ const Register = () => {
                         <SocialLogin></SocialLogin>
                         {/* <SocialLogin></SocialLogin> */}
                         <label className="label">
-                            {/* <p className="label-text-alt text-red-600">{error}</p>
-                            <p className="label-text-alt text-green-600">{success}</p> */}
+                            <p className="label-text-alt text-red-600">{error}</p>
+                            <p className="label-text-alt text-green-600">{success}</p>
                         </label>
                     </form>
                 </div>
