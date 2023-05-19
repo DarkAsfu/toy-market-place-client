@@ -13,7 +13,7 @@ const Banner = () => {
                     <img src={banner1} className="w-full md:rounded-xl" style={{ objectFit: 'cover' }}  />
                     <div className="absolute  h-full md:rounded-xl left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
                         <div className='text-white  space-y-8  pt-28 md:px-96 text-center'>
-                            <h2 className='text-6xl  font-bold md:space-x-4'>Discover an Exciting World of Toy Cars</h2>
+                            <h2 className='text-6xl  font-bold md:space-x-4'>Discover an Exciting World of Toy Bus</h2>
                             <p>Explore a wide range of toy cars for kids of all ages. From remote-controlled cars to miniature collectibles, we have something for everyone.</p>
                             <div>
                                 <button className="btn border-0 bg-blue-500 hover:bg-blue-700 mr-4">Discover more</button>
