@@ -1,20 +1,29 @@
+import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 const CategoryTab = () => {
+    const [toys, setToys] = useState([]);
+    const [activeTab, setActiveTab] = useState('car');
+    useEffect(()=>{
+        fetch(`http://localhost:5000/allToy/${activeTab}`)
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }, [])
+
     return (
         <div className="mb-10">
             <Tabs>
-                <TabList className="w-10/12 md:w-2/5 mx-auto font-bold text-center text-2xl  mb-10 border">
-                    <Tab>Car</Tab>
-                    <Tab>Bus</Tab>
-                    <Tab>Truck</Tab>
+                <TabList className="min-w-fit mx-auto font-bold text-center md:text-2xl  mb-10 border">
+                    <Tab onClick={()=>setActiveTab('car')}>Car Toys</Tab>
+                    <Tab onClick={()=>setActiveTab('bus')}>Bus Toys</Tab>
+                    <Tab onClick={()=>setActiveTab('truck')}>Truck Toys</Tab>
 
                 </TabList>
 
                 <TabPanel>
                     <div className="md:grid grid-cols-2 gap-20 px-4 md:px-0">
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Car</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
@@ -24,7 +33,7 @@ const CategoryTab = () => {
                             </div>
                         </div>
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">New movie is released!</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
@@ -38,7 +47,7 @@ const CategoryTab = () => {
                 <TabPanel>
                 <div className="grid grid-cols-2 gap-20">
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Bus</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
@@ -48,7 +57,7 @@ const CategoryTab = () => {
                             </div>
                         </div>
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">New movie is released!</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
@@ -63,7 +72,7 @@ const CategoryTab = () => {
                 <TabPanel>
                 <div className="grid grid-cols-2 gap-20">
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Truck!</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
@@ -73,7 +82,7 @@ const CategoryTab = () => {
                             </div>
                         </div>
                         <div className="card card-side bg-base-100 shadow-xl">
-                            <figure><img src="/images/stock/photo-1635805737707-575885ab0820.jpg" alt="Movie" /></figure>
+                            <figure><img src="" alt="Movie" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">New movie is released!</h2>
                                 <p>Click the button to watch on Jetflix app.</p>
