@@ -12,7 +12,7 @@ const NabBar = () => {
     }
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/allToys'>All Toys</Link></li>
+        <li><Link to='/alltoys'>All Toys</Link></li>
         {
             user &&
             <>
