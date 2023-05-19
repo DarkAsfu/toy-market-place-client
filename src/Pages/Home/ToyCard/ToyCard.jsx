@@ -36,7 +36,7 @@ const ToyCard = ({ toy }) => {
                     <p>Rating: {toy.rating}</p>
                     <div className="card-actions justify-end">
                         {user ?
-                            <Link to='/toydetails'  className="btn btn-primary">Details</Link> : <Link to='/toydetails' onClick={showToast} className="btn btn-primary">Details</Link>
+                            <Link to={`/toydetails/${toy?._id}`}  className="btn btn-primary">Details</Link> : <Link to={`/toydetails/${toy?._id}`} onClick={showToast} className="btn btn-primary">Details</Link>
                         }
                     </div>
                 </div>

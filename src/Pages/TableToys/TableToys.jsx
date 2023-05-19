@@ -1,4 +1,28 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+
 const TableToys = ({ toys }) => {
+    const { user } = useContext(AuthContext);
+    const showToast = () => {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'success',
+            title: 'You have to log in first to view details'
+        })
+    }
     console.log(toys);
     return (
         <>
@@ -22,7 +46,9 @@ const TableToys = ({ toys }) => {
                     </div>
                 </td>
                 <td className="p-2 whitespace-nowrap text-center">
-                    <button className="btn btn-ghost text-left text-blue-500">Details</button>
+                    {user ?
+                        <Link to={`/toydetails/${toys?._id}`} className="btn btn-primary">Details</Link> : <Link to={`/toydetails/${toys?._id}`} onClick={showToast} className="btn btn-primary">Details</Link>
+                    }
                 </td>
             </tr>
         </>
