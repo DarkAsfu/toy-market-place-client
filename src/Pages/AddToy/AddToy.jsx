@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useTitle from "../../hooks/useTitle";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
@@ -52,6 +53,7 @@ const AddToy = () => {
     }   
     return (
         <div>
+            <ScrollToTop></ScrollToTop>
             <h1>ADD YOUR TOY</h1>
 
             <div className=" flex-shrink-0 mx-auto bg-[#F3F3F3] md:p-10 my-10">

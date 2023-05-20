@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import error from '../../../src/assets/404.gif'
+import useTitle from '../../hooks/useTitle';
 
 const Error = () => {
     useTitle('ToyCarTrader | Error')

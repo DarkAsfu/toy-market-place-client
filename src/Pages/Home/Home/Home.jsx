@@ -1,3 +1,4 @@
+import ScrollToTop from "../../../ScrollToTop/ScrollToTop";
 import useTitle from "../../../hooks/useTitle";
 import Banner from "../Banner/Banner";
 import CategoryTab from "../CategoryTab/CategoryTab";
@@ -9,6 +10,7 @@ const Home = () => {
     useTitle('ToyCarTrader | Home')
     return (
         <>
+            <ScrollToTop></ScrollToTop>
             <Banner></Banner>
             <Gallery></Gallery>
             <CategoryTab></CategoryTab>

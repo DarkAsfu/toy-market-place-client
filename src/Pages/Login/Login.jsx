@@ -3,6 +3,7 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useTitle from "../../hooks/useTitle";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 const Login = () => {
     const { handleSignIn } = useContext(AuthContext);
@@ -17,21 +18,22 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
         handleSignIn(email, password)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            setSuccess('Successfully login!!');
-            setError('');
-            form.reset();
-            navigate("/")
-        })
-        .catch(error =>{
-            console.log(error.message);
-            setError(error.message);
-            setSuccess('')
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                setSuccess('Successfully login!!');
+                setError('');
+                form.reset();
+                navigate("/")
+            })
+            .catch(error => {
+                console.log(error.message);
+                setError(error.message);
+                setSuccess('')
+            })
     }
-    return (
+    return (<>
+        <ScrollToTop></ScrollToTop>
         <div className=''>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
@@ -70,6 +72,8 @@ const Login = () => {
                 </div>
             </div>
         </div>
+    </>
+
     );
 };
 

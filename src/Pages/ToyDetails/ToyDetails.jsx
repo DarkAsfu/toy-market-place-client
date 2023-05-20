@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 
 const ToyDetails = () => {
@@ -6,6 +7,7 @@ const ToyDetails = () => {
     console.log(singleToy);
     return (
         <div className=" w-8/12 mx-auto">
+            <ScrollToTop></ScrollToTop>
             <Link to='/allToys' className="mb-8  btn btn-outline text-blue-700"> Back to All toys </Link>
             <div className=" bg-base-100 border mb-10">
                 <figure><img className="w-full" src={singleToy.picture} alt="Shoes" /></figure>

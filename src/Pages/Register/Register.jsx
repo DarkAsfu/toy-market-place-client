@@ -3,6 +3,7 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useTitle from "../../hooks/useTitle";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 
 const Register = () => {
@@ -53,6 +54,7 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <ScrollToTop></ScrollToTop>
             <div className="hero-content flex-col">
                 <div className="text-center px-10">
                     <h1 className="text-4xl font-bold">Please Register !</h1>

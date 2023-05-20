@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import TableToys from "../TableToys/TableToys";
 import { useState } from "react";
 import useTitle from "../../hooks/useTitle";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 const AllToys = () => {
     const allToys = useLoaderData();
@@ -19,6 +20,7 @@ const AllToys = () => {
     useTitle('ToyCarTrader | AllToys')
     return (
         <div>
+            <ScrollToTop></ScrollToTop>
             <section className="antialiased bg-gray-100 text-gray-600 py-10 mb-10 px-4">
                 <div className="flex flex-col justify-center">
 

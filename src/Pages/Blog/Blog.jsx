@@ -1,3 +1,4 @@
+import ScrollToTop from '../../ScrollToTop/ScrollToTop';
 import blog1 from '../../assets/blog/blog1.png'
 import blog2 from '../../assets/blog/blog2.jpg'
 import blog3 from '../../assets/blog/blog3.png'
@@ -7,6 +8,7 @@ const Blog = () => {
     useTitle('ToyCarTrader | Blog')
     return (
         <div className='py-24'>
+            <ScrollToTop></ScrollToTop>
             <div className='w-3/4 mx-auto border p-10'>
                 <img src={blog1} alt="" />
                 <h4 className='text-2xl font-bold text-blue-500 py-4'>What is an access token and refresh token? How do they work and where should we store them on the client-side? </h4>
