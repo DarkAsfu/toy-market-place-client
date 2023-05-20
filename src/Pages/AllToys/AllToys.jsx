@@ -25,10 +25,10 @@ const AllToys = () => {
                                     <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                                         <tr>
                                             <th className="p-2 whitespace-nowrap">
-                                                <div className="font-semibold text-left">Seller</div>
+                                                <div className="font-semibold text-left">Toy Name</div>
                                             </th>
                                             <th className="p-2 whitespace-nowrap">
-                                                <div className="font-semibold text-left">Toy Name</div>
+                                                <div className="font-semibold text-left">Seller</div>
                                             </th>
                                             <th className="p-2 whitespace-nowrap">
                                                 <div className="font-semibold text-left">Category</div>

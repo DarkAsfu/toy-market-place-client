@@ -16,7 +16,7 @@ const ToyDetails = () => {
                     </h2>
                     <p>{singleToy.description}</p>
                     <p className="font-bold">Price: ${singleToy.price}</p>
-                    <p className="font-bold">Quantity: ${singleToy.availableQuantity
+                    <p className="font-bold">Quantity: {singleToy.availableQuantity
                     }</p>
                     <div className="badge badge-outline text-xl p-4 mt-4">{singleToy.sellerName}</div>
                     <div className="badge badge-outline">{singleToy.email}</div>

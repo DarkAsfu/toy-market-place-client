@@ -16,7 +16,7 @@ const NabBar = () => {
         {
             user &&
             <>
-                <li><Link to='/myToys'>My Toys</Link></li>
+                <li><Link to='/mytoys'>My Toys</Link></li>
                 <li><Link to='/addToys'>Add A Toys</Link></li>
             </>
         }

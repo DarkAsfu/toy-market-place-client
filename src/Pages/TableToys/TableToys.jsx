@@ -29,11 +29,13 @@ const TableToys = ({ toys }) => {
             <tr>
                 <td className="p-2 whitespace-nowrap">
                     <div className="flex items-center">
-                        <div className="font-medium text-gray-800">{toys?.sellerName}</div>
+                        <img src={toys?.picture} className="w-40 rounded-md mr-4" alt="" />
+                        <div className="text-left font-bold">{toys?.name}</div>
+
                     </div>
                 </td>
                 <td className="p-2 whitespace-nowrap">
-                    <div className="text-left">{toys?.name}</div>
+                    <div className="font-medium text-gray-800">{toys?.sellerName}</div>
                 </td>
                 <td className="p-2 whitespace-nowrap">
                     <div className="text-left font-medium text-gray-700">{toys?.category}</div>
