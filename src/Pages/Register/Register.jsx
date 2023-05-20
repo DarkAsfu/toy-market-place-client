@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 
 const Register = () => {
     const {handleCreateUser, updateInfo} = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    useTitle('ToyCarTrader | Register')
     const handleRegister = (e) =>{
         e.preventDefault();
         const form = e.target;

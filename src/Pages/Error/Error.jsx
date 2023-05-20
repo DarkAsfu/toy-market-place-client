@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import error from '../../../src/assets/404.gif'
 
 const Error = () => {
+    useTitle('ToyCarTrader | Error')
     return (
             <div className='grid justify-center'>
                 <img src={error} alt="" />

@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
+    useTitle('ToyCarTrader | AddToy')
     const handleAddProduct = (e) => {
         e.preventDefault();
         const form = e.target;

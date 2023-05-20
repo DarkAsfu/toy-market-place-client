@@ -2,7 +2,9 @@ import blog1 from '../../assets/blog/blog1.png'
 import blog2 from '../../assets/blog/blog2.jpg'
 import blog3 from '../../assets/blog/blog3.png'
 import blog4 from '../../assets/blog/blog4.png'
+import useTitle from '../../hooks/useTitle';
 const Blog = () => {
+    useTitle('ToyCarTrader | Blog')
     return (
         <div className='py-24'>
             <div className='w-3/4 mx-auto border p-10'>

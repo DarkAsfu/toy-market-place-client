@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import TableToys from "../TableToys/TableToys";
 import { useState } from "react";
+import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
     const allToys = useLoaderData();
@@ -15,7 +16,7 @@ const AllToys = () => {
         .then(data => setToys(data))
         
     }
-    
+    useTitle('ToyCarTrader | AllToys')
     return (
         <div>
             <section className="antialiased bg-gray-100 text-gray-600 py-10 mb-10 px-4">
