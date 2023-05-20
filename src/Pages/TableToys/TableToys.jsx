@@ -28,7 +28,7 @@ const TableToys = ({ toys }) => {
         <>
             <tr>
                 <td className="p-2 whitespace-nowrap">
-                    <div className="flex items-center">
+                    <div className="md:flex items-center">
                         <img src={toys?.picture} className="w-40 rounded-md mr-4" alt="" />
                         <div className="text-left font-bold">{toys?.name}</div>
 

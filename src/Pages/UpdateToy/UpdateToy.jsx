@@ -48,7 +48,7 @@ const UpdateToy = () => {
             <div className="card-body ">
                 <form onSubmit={updateToyData}>
                     <div className="md:grid grid-cols-2 gap-4 space-y-4 md:space-y-0">
-                        <div className="form-control">
+                        <div className="form-control ">
                             <label className="mb-2 font-bold">Photo URL</label>
                             <input type="text" name="photoURL" defaultValue={toys.picture} className="input input-bordered" required />
                         </div>
