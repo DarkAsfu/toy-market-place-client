@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
-
+import Rating from "react-rating";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 
 const ToyCard = ({ toy }) => {
@@ -34,9 +35,16 @@ const ToyCard = ({ toy }) => {
                     <h2 className="card-title">{toy.name}</h2>
                     <p>Price: ${toy.price}</p>
                     <p>Rating: {toy.rating}</p>
+                    <Rating
+                        placeholderRating={toy.rating}
+                        readonly
+                        emptySymbol={<FaRegStar></FaRegStar>}
+                        placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+                        fullSymbol={<FaStar></FaStar>}
+                    />
                     <div className="card-actions justify-end">
                         {user ?
-                            <Link to={`/toydetails/${toy?._id}`}  className="btn btn-primary">Details</Link> : <Link to={`/toydetails/${toy?._id}`} onClick={showToast} className="btn btn-primary">Details</Link>
+                            <Link to={`/toydetails/${toy?._id}`} className="btn btn-primary">Details</Link> : <Link to={`/toydetails/${toy?._id}`} onClick={showToast} className="btn btn-primary">Details</Link>
                         }
                     </div>
                 </div>

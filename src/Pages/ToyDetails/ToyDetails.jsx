@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
-
+import Rating from "react-rating";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const ToyDetails = () => {
     const singleToy = useLoaderData();
@@ -23,9 +24,15 @@ const ToyDetails = () => {
                     <div className="badge badge-outline text-xl p-4 mt-4">{singleToy.sellerName}</div>
                     <div className="badge badge-outline">{singleToy.email}</div>
 
-                    <div className="card-actions justify-end">
+                    <div className="card-actions md:justify-end">
                         <div className="badge badge-outline">Rating: </div>
-                        <div className="badge badge-outline">{singleToy.rating}</div>
+                        <div><Rating
+                        placeholderRating={singleToy.rating}
+                        readonly
+                        emptySymbol={<FaRegStar></FaRegStar>}
+                        placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+                        fullSymbol={<FaStar></FaStar>}
+                    /></div>
                     </div>
                 </div>
             </div>
