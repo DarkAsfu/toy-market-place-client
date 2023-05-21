@@ -55,7 +55,7 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <ScrollToTop></ScrollToTop>
-            <div className="hero-content grid grid-cols-2 py-20">
+            <div className="hero-content grid grid-cols-1 md:grid-cols-2 py-20">
                 <div className="text-center px-10">
                     <h1 className="text-4xl font-bold">Please Register !</h1>
                     <img src="https://i.ibb.co/Prv3X1W/Pngtree-purple-office-ui-registration-illustration-4978562.png" alt="" />

@@ -36,7 +36,7 @@ const Login = () => {
         <ScrollToTop></ScrollToTop>
         <div className=''>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content grid grid-cols-2 py-20">
+                <div className="hero-content grid grid-cols-1 md:grid-cols-2 py-20">
                     <div className="text-center px-14">
                         <h1 className="text-4xl font-bold mb-2">Please Login !</h1>
                         {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, officiis.</p> */}
