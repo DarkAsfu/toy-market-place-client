@@ -24,7 +24,7 @@ const MyToysTable = ({ toys, myToys, setMyToys }) => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your Chocolate has been deleted.',
+                                'Your Toy has been deleted.',
                                 'success'
                             )
                             const remaining = myToys.filter(c => c._id !== id);

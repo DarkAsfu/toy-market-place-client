@@ -1,15 +1,16 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateToy = () => {
     const toys = useLoaderData();
     // console.log(loadedToy);
+    const navigate = useNavigate();
     const updateToyData = (e) =>{
         e.preventDefault();
         const form = e.target;
         const picture = form.photoURL.value;
         const name = form.name.value;
-        const price = form.price.value;
+        const price = parseFloat(form.price.value);
         const availableQuantity = form.quantity.value;
         const description = form.description.value;
         const updateToy = {
@@ -39,6 +40,8 @@ const UpdateToy = () => {
                         'success'
                     )
                     form.reset();
+                    navigate('/myToys');
+
                 }
             })
     }
