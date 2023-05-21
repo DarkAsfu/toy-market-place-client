@@ -21,7 +21,7 @@ const ToyDetails = () => {
                     <p className="font-bold">Price: ${singleToy.price}</p>
                     <p className="font-bold">Quantity: {singleToy.availableQuantity
                     }</p>
-                    <div className="badge badge-outline text-xl p-4 mt-4">{singleToy.sellerName}</div>
+                    <div className="badge badge-outline text-sm p-4 mt-4">{singleToy.sellerName}</div>
                     <div className="badge badge-outline">{singleToy.email}</div>
 
                     <div className="card-actions md:justify-end">

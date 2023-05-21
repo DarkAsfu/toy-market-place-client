@@ -54,9 +54,10 @@ const AddToy = () => {
     return (
         <div>
             <ScrollToTop></ScrollToTop>
-            <h1>ADD YOUR TOY</h1>
-
+            
+            <h1 className="font-bold text-blue-900 md:text-4xl text-center">ADD YOUR NEW TOY</h1>
             <div className=" flex-shrink-0 mx-auto bg-[#F3F3F3] md:p-10 my-10">
+            
                 <div className="card-body ">
                     <form onSubmit={handleAddProduct}>
                         <div className="md:grid grid-cols-2 gap-4 space-y-4 md:space-y-0">
