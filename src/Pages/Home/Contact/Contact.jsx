@@ -33,7 +33,7 @@ const Contact = () => {
     return (
         <div>
            
-            <div data-aos="fade-down-right" className="bg-white text-gray-100 mx-auto">
+            <div data-aos="fade-up" className="bg-white text-gray-100 mx-auto">
                 <div
                     className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto  text-gray-900 rounded-lg border mb-10">
                     <div  data-aos="fade-down-right" className="flex flex-col justify-between">
@@ -42,7 +42,7 @@ const Contact = () => {
                             <img src={contact} alt="" />
                         </div>
                     </div>
-                    <div  data-aos="fade-down-left" className="">
+                    <div  data-aos="fade-down" className="">
                         <div>
                             <h2 className='py-10 text-4xl font-bold'>Contact Us</h2>
                         </div>
