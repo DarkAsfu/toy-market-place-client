@@ -28,9 +28,9 @@ const ToyCard = ({ toy }) => {
     }
     return (
         <div>
-            <h1></h1>
-            <div className="card card-side bg-base-100 shadow-xl grid grid-cols-2 items-center justify-center">
-                <figure className="w-full"><img className="w-full h-56" src={toy.picture} alt="Movie" /></figure>
+            
+            <div className="card card-side bg-base-100 shadow-xl grid md:grid-cols-2 items-center justify-center mb-4">
+                <figure className="w-full"><img className="w-full h-64 rounded-lg" src={toy.picture} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{toy.name}</h2>
                     <p>Price: ${toy.price}</p>
@@ -42,9 +42,9 @@ const ToyCard = ({ toy }) => {
                         placeholderSymbol={<FaStar className="text-warning"></FaStar>}
                         fullSymbol={<FaStar></FaStar>}
                     />
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-start">
                         {user ?
-                            <Link to={`/toydetails/${toy?._id}`} className="btn btn-primary">Details</Link> : <Link to={`/toydetails/${toy?._id}`} onClick={showToast} className="btn btn-primary">Details</Link>
+                            <Link to={`/toydetails/${toy?._id}`} className="btn border-0 bg-purple-600">Details</Link> : <Link to={`/toydetails/${toy?._id}`} onClick={showToast} className="btn bg-purple-600  border-0">Details</Link>
                         }
                     </div>
                 </div>
