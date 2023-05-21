@@ -19,9 +19,10 @@ const SocialLogin = () => {
     }
     return (
         <div className="text-center">
-            <p className=''>or sign in with</p>
-            <div className='flex gap-4 text-5xl justify-center mt-4'>
-                <FcGoogle onClick={handleGoogleSignIn} className='bg-[#F5F5F8] p-3 rounded-full text-6xl'></FcGoogle>
+            <p className=''>-or sign in with-</p>
+            <div onClick={handleGoogleSignIn}  className='flex gap-4 py-2 justify-center items-center mt-4 border mx-4'>
+                <FcGoogle className='bg-[#F5F5F8] p-3 text-5xl rounded-full'></FcGoogle>
+                <h2 className="text-md font-semibold">Google</h2>
             </div>
         </div>
     );

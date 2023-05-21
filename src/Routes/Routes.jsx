@@ -37,12 +37,12 @@ const router = createBrowserRouter([
             {
                 path: '/toydetails/:id',
                 element: <PrivateRouter><ToyDetails></ToyDetails></PrivateRouter>,
-                loader: ({params}) => fetch(`http://localhost:5000/allToy/details/${params.id}`)
+                loader: ({params}) => fetch(`https://toy-car-trader-server-darkasfu.vercel.app/allToy/details/${params.id}`)
             },
             {
                 path: '/alltoys',
                 element: <AllToy></AllToy>,
-                loader: ()=>fetch('http://localhost:5000/allToy')
+                loader: ()=>fetch('https://toy-car-trader-server-darkasfu.vercel.app/allToy')
             },
             {
                 path: '/addToys',
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <UpdateToy></UpdateToy>,
-                loader: ({params}) => fetch(`http://localhost:5000/allToy/details/${params.id}`)
+                loader: ({params}) => fetch(`https://toy-car-trader-server-darkasfu.vercel.app/allToy/details/${params.id}`)
             }
         ]
     },

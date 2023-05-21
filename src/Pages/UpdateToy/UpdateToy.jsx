@@ -23,7 +23,7 @@ const UpdateToy = () => {
         
         console.log(updateToy);
 
-        fetch(`http://localhost:5000/allToy/details/${toys._id}`, {
+        fetch(`https://toy-car-trader-server-darkasfu.vercel.app/allToy/details/${toys._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -66,7 +66,7 @@ const UpdateToy = () => {
 
                         <div className="form-control">
                             <label className="mb-2 font-bold">Quantity</label>
-                            <input type="number" name="quantity" defaultValue={toys.availableQuantity} className="input input-bordered" required />
+                            <input type="text" name="quantity" defaultValue={toys.availableQuantity} className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="form-control">

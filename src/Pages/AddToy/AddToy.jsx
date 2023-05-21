@@ -31,7 +31,7 @@ const AddToy = () => {
             description
         }
         console.log(toy);
-        fetch('http://localhost:5000/allToy', {
+        fetch('https://toy-car-trader-server-darkasfu.vercel.app/allToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

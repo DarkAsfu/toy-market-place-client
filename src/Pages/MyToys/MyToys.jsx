@@ -9,7 +9,7 @@ const MyToys = () => {
     console.log(user);
     useTitle('ToyCarTrader | MyToys')
     const [myToys, setMyToys] = useState([]);
-    const url = `http://localhost:5000/mytoys?email=${user?.email}`;
+    const url = `https://toy-car-trader-server-darkasfu.vercel.app/mytoys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -20,13 +20,13 @@ const MyToys = () => {
     console.log(myToys);
 
     const sortByAscending = () => {
-        fetch(`http://localhost:5000/mytoys/ascending?email=${user?.email}`)
+        fetch(`https://toy-car-trader-server-darkasfu.vercel.app/mytoys/ascending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     };
 
     const sortByDescending = () => {
-        fetch(`http://localhost:5000/mytoys/descending?email=${user?.email}`)
+        fetch(`https://toy-car-trader-server-darkasfu.vercel.app/mytoys/descending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     };

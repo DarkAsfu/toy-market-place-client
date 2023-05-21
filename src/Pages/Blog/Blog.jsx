@@ -14,7 +14,7 @@ const Blog = () => {
                 <h4 className='text-2xl font-bold text-blue-500 py-4'>What is an access token and refresh token? How do they work and where should we store them on the client-side? </h4>
                 <p>Access tokens and refresh tokens are commonly used in authentication systems to secure access to resources and provide a seamless user experience.
 
-                    An access token is a credential that is granted to a client (such as a web or mobile application) after a successful authentication process. It contains information about the client's identity and permissions, allowing it to access specific resources or perform authorized actions. Access tokens have a limited lifespan and are used to authenticate requests to protected APIs.
+                    An access token is a credential that is granted to a client (such as a web or mobile application) after a successful authentication process. It contains information about the clients identity and permissions, allowing it to access specific resources or perform authorized actions. Access tokens have a limited lifespan and are used to authenticate requests to protected APIs.
 
                     On the other hand, a refresh token is a long-lived credential that is issued alongside the access token. It is used to obtain a new access token without requiring the user to reauthenticate. When the access token expires, the client can use the refresh token to request a fresh access token from the authentication server.
 
@@ -55,7 +55,7 @@ const Blog = () => {
                 <img src={blog4} alt="" />
                 <h4 className='text-2xl font-bold text-blue-500 py-4'>What is MongoDB aggregate and how does it work? write 100 words</h4>
                 <p>
-                    MongoDB's aggregate is a powerful feature that allows for complex data aggregation operations within the database. It provides a way to perform calculations, transformations, and grouping operations on collections of documents.<br />
+                    MongoDBs aggregate is a powerful feature that allows for complex data aggregation operations within the database. It provides a way to perform calculations, transformations, and grouping operations on collections of documents.<br />
                     Aggregation pipelines in MongoDB consist of multiple stages, where each stage performs a specific operation on the data. These stages can include grouping, filtering, sorting, projecting, and more. Each stage takes the input from the previous stage and produces an output that gets passed to the next stage in the pipeline.<br />
                     The aggregate function in MongoDB accepts an array of stages as its parameter, allowing for a flexible and customizable aggregation process. This allows developers to perform advanced analytics, generate reports, and extract meaningful insights from their data efficiently. Aggregation pipelines in MongoDB can handle large volumes of data and provide powerful query capabilities, making them a valuable tool for data analysis and processing.
                 </p>

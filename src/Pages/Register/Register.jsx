@@ -55,9 +55,10 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <ScrollToTop></ScrollToTop>
-            <div className="hero-content flex-col">
+            <div className="hero-content grid grid-cols-2 py-20">
                 <div className="text-center px-10">
                     <h1 className="text-4xl font-bold">Please Register !</h1>
+                    <img src="https://i.ibb.co/Prv3X1W/Pngtree-purple-office-ui-registration-illustration-4978562.png" alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <form onSubmit={handleRegister} className="card-body">
@@ -84,6 +85,7 @@ const Register = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                            <p><small className="text-gray-500">[*Password must be one capital letter, one number, one special character and eight digit*]</small></p>
                             <label className="label">
                                 <p className="label-text-alt ">Already have an account? please <Link to='/login' className='text-blue-400'>Sign in</Link></p>
                             </label>
