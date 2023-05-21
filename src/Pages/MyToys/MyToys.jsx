@@ -18,6 +18,19 @@ const MyToys = () => {
             })
     }, [url])
     console.log(myToys);
+
+    const sortByAscending = () => {
+        fetch(`http://localhost:5000/mytoys/ascending?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+    };
+
+    const sortByDescending = () => {
+        fetch(`http://localhost:5000/mytoys/descending?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data => setMyToys(data))
+    };
+
     return (
         <div>
             <ScrollToTop></ScrollToTop>
@@ -27,12 +40,11 @@ const MyToys = () => {
                     <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
                         <header className="px-5 py-4 border-b border-gray-100 flex justify-between items-center">
                             <h2 className="font-semibold text-gray-800 w-1/2">My Toys</h2>
-                            <form className="input-group flex justify-end">
-                                <input type="text" placeholder="Search by name" className="input input-bordered" />
-                                <button className="btn btn-square">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                                </button>
-                            </form>
+                            <div>
+                                <span className="ml-10 text-red-700 font-bold">Sort by price</span>
+                                <button className="btn btn-outline text-gray-500 ml-4 w-40" onClick={sortByAscending}>Ascending</button>
+                                <button className="btn btn-outline text-gray-500 ml-4 w-40" onClick={sortByDescending}>Desscending</button>
+                            </div>
                         </header>
                         <div className="p-3">
                             <div className="overflow-x-auto">
